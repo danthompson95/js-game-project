@@ -16,6 +16,41 @@ export function resourcePanel(foodImg, stoneImg, woodImg) {
   return holder
 }
 
+export function workerPanel(manImage) {
+  const workerDiv = document.createElement('div')
+  const innerDiv = document.createElement('div')
+  workerDiv.classList.add('resource-area')
+  const workerImage = document.createElement('div')
+  workerDiv.appendChild(innerDiv)
+  innerDiv.appendChild(workerImage)
+  workerImage.classList.add('resource-panel')
+
+  const icon = new Image()
+  icon.src = manImage
+  icon.classList.add('resource-image')
+  workerImage.appendChild(icon)
+
+  const innerText = document.createElement('p')
+  innerText.classList.add('resource-text')
+  let savedWorkers = localStorage.getItem('totalWorkers')
+  let currentTier = localStorage.getItem('currentTier')
+  let tierWorkers
+  let currentWorkers = 0
+  if (currentTier) {
+    tierWorkers = data.initialData.tier[currentTier].maxWorkers
+  } else {
+    tierWorkers = data.initialData.tier[0].maxWorkers
+  }
+
+  if (savedWorkers) currentWorkers = savedWorkers
+
+  innerText.innerHTML = `${currentWorkers}/${tierWorkers}`
+
+  workerImage.appendChild(innerText)
+
+  return workerDiv
+}
+
 function resourceItem(name, img) {
   const resourceDiv = document.createElement('div')
   const resourceImage = document.createElement('div')
