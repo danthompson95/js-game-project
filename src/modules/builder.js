@@ -1,3 +1,6 @@
+import '../css/resourcePanels.css'
+import * as data from './data'
+
 export function resourcePanel(foodImg, stoneImg, woodImg) {
   const holder = document.createElement('div')
   holder.classList.add('resource-area')
