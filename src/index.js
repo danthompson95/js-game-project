@@ -8,7 +8,6 @@ import foodImage from './icons/food.png'
 
 // initial css import
 import './css/main.css'
-import './css/resourcePanels.css'
 
 function component() {
   const element = document.createElement('div')
