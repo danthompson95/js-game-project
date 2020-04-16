@@ -1,0 +1,33 @@
+.resource-panel {
+  display: inline-block;
+  width: 30%;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.resource-image {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-right: 1px solid black;
+
+}
+
+.resource-text {
+  display: inline-block;
+  margin-left: 10px;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+.resource-rate {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.resource-area {
+  width: 40%;
+}
