@@ -15,8 +15,11 @@ function component() {
   const element = document.createElement('div')
   element.setAttribute('id', 'mainContent')
 
-  const panels = build.resourcePanel(foodImage, stoneImage, woodImage)
-  element.appendChild(panels)
+  const resourcePanels = build.resourcePanel(foodImage, stoneImage, woodImage)
+  element.appendChild(resourcePanels)
+
+  const workerPanels = build.workerPanel(manImage)
+  element.appendChild(workerPanels)
 
   return element
 }
