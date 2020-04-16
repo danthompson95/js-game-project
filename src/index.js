@@ -25,3 +25,7 @@ function component() {
 }
 
 document.body.appendChild(component())
+
+window.setInterval(() => {
+  utils.progressValues()
+}, 1000)
