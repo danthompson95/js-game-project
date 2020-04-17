@@ -68,3 +68,9 @@ function runInitial() {
 window.setInterval(() => {
   utils.progressValues()
 }, 1000)
+
+window.setInterval(() => {
+  utils.updateButtons()
+}, 10)
+
+runInitial()
