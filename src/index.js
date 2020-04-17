@@ -11,9 +11,9 @@ import manImage from './icons/man.png'
 // initial css import
 import './css/main.css'
 
-function component() {
+function resourceArea() {
   const element = document.createElement('div')
-  element.setAttribute('id', 'mainContent')
+  element.setAttribute('id', 'resourceContent')
 
   const resourcePanels = build.resourcePanel(foodImage, stoneImage, woodImage)
   element.appendChild(resourcePanels)
