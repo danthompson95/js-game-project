@@ -58,24 +58,10 @@ function resourceItem(name, img) {
 
   const initialValue = getSavedResource(name)
   const innerText = document.createElement('p')
-  let currentTier = localStorage.getItem('currentTier')
-  let maxResource
-  let identifier = name + 'Max'
-  if (currentTier) {
-    maxResource = data.initialData.tier[currentTier][identifier]
-  } else {
-    maxResource = data.initialData.tier[0][identifier]
-  }
-  innerText.innerHTML = `${initialValue}/${maxResource}`
+  innerText.setAttribute('id', `${name}Value`)
+  innerText.innerHTML = `${initialValue}`
   innerText.classList.add('resource-text')
   resourceImage.appendChild(innerText)
-
-  const rateDiv = document.createElement('div')
-  const rateText = document.createElement('p')
-  rateText.innerHTML = '0/s'
-  rateDiv.classList.add('resource-rate')
-  rateDiv.appendChild(rateText)
-  resourceDiv.appendChild(rateDiv)
 
   return resourceDiv
 }
